@@ -1,4 +1,4 @@
-#Anamoly Detection with ELK stack, KAFKA and Machine Learning. 
+# Anamoly Detection with ELK stack, KAFKA and Machine Learning. 
 
 
 ### What is ELK stands for?
