@@ -22,3 +22,7 @@ To illustrate, the above figure represents the whole pipeline except the ML impl
 
 ## Start the Pipeline: 
 
+Before starting the pipeline, we must configure the logstash configuration and we can also configure ans set certain filtering to get our necessary data. 
+
+* 1. Up the docker-compose.yml (It will start running all the service)
+* 2. Up the kafka.yml file to start Kafka service which will also up the zookeeper and kafkabroker.
