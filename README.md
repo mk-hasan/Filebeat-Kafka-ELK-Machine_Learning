@@ -22,7 +22,13 @@ To illustrate, the above figure represents the whole pipeline except the ML impl
 
 ## Start the Pipeline: 
 
-Before starting the pipeline, we must configure the logstash configuration and we can also configure ans set certain filtering to get our necessary data. 
+Before starting the pipeline, we must configure the logstash configuration and we can also configure ans set certain filtering to get our necessary data. We have to give the input file path through logstash docker compose. Here i have given an example like access.log(simple log file). 
 
-* 1. Up the docker-compose.yml (It will start running all the service)
-* 2. Up the kafka.yml file to start Kafka service which will also up the zookeeper and kafkabroker.
+*  Up the Filebeat.yml file for running the filebeat service which will read the data from specific location or path and send it to kafka broker.
+*  Up the kafka.yml file to start Kafka service which will also up the zookeeper and kafkabroker. Kafka will communicate with ELK stack and send the data from kafka topic. 
+*  Up the docker-compose.yml (It will start running all the service). Logstash will get teh data from kafka topic according to the topic name and filter it according to your needs and then finally send it to elasticsearch. From the elasticsearch it can be process and visualize through kibana or use the data for ML model training/Testing. 
+
+I am going to add the ML configuration in coming days. 
+
+Please rate it with star if it helps you somehow. 
+
