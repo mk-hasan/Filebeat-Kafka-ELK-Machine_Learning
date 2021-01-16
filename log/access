@@ -1,0 +1,10 @@
+## Message published to `uat.catalogue.item` kafka topic
+
+## SUCCESS Message
+{"app":"catalogue-item","crid":"1BFXCD","uuid":"ec25cdc8-a336-11ea-bb37-0242ac130002","msg":"Create Catlogue PayLoad - {'sku':'CTLG-123-0001','name':'The Avengers','description':'Marvel's The Avengers Movie','category':'Movies','price':0,'inventory':0}","status":"SUCCESS","latency":"1","source":"Postman API Client","destination":"Catalogue DataBase","time_stamp":"2020-05-31T13:22:10.120Z"}
+
+## WARN Message
+{"app":"catalogue-item","crid":"1BFXCD","uuid":"ec25cdc8-a336-11ea-bb37-0242ac130002","msg":"Create Catlogue PayLoad - {'sku':'CTLG-123-0001','name':'The Avengers','description':'Marvel's The Avengers Movie','category':'Movies','price':0,'inventory':0}","status":"WARN","latency":"1","source":"Postman API Client","destination":"Catalogue DataBase","time_stamp":"2020-05-31T13:22:10.120Z"}
+
+## ERROR Message
+{"app":"catalogue-item","crid":"1BFXCD","uuid":"ec25cdc8-a336-11ea-bb37-0242ac130002","msg":"Create Catlogue PayLoad - {'sku':'CTLG-123-0001','name':'The Avengers','description':'Marvel's The Avengers Movie','category':'Movies','price':0,'inventory':0}","status":"ERROR","latency":"1","source":"Postman API Client","destination":"Catalogue DataBase","time_stamp":"2020-05-31T13:22:10.120Z"}

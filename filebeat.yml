@@ -1,0 +1,21 @@
+filebeat.prospectors:
+- type: log
+  enabled: true
+  paths:
+    - /mnt/log/*.log
+
+output.kafka:
+  # specifying filebeat to take timestamp and message fields, other wise it
+  # take the lines as json and publish to kafka
+  codec.format:
+    string: '%{[@timestamp]} %{[message]}'
+  # kafka
+  # 10.252.94.61 is my local machine ip address
+  # publishing to 'log' topic
+  hosts: ["kafkaserver:9092"]
+  topic: 'uat.catalogue.item'
+  partition.round_robin:
+    reachable_only: false
+  required_acks: 1
+  compression: gzip
+  max_message_bytes: 1000000
